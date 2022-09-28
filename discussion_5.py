@@ -75,8 +75,13 @@ class TestAllMethods(unittest.TestCase):
 		self.assertEqual(warehouse.get_max_stock(), self.item3, "get_max_stock failed")
 	
 	def test_warehouse_get_max_price(self):
-
-		pass
+		warehouse = Warehouse()
+		warehouse.add_item(self.item1)
+		warehouse.add_item(self.item2)
+		warehouse.add_item(self.item3)
+		warehouse.add_item(self.item4)
+		warehouse.add_item(self.item5)
+		self.assertEqual(warehouse.get_max_price(), self.item1, "get_max_price failed")
 	
 def main():
 	unittest.main()
