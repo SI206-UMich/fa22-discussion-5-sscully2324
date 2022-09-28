@@ -57,11 +57,17 @@ class TestAllMethods(unittest.TestCase):
 		self.assertEqual(count_a(self.item5.name), 2, "count_a failed on item5")
 
 	def test_warehouse_add_item(self):
-		pass
-		
+		warehouse = Warehouse()
+		warehouse.add_item(self.item1)
+		warehouse.add_item(self.item2)
+		warehouse.add_item(self.item3)
+		warehouse.add_item(self.item4)
+		warehouse.add_item(self.item5)
+		self.assertEqual(len(warehouse.items), 5, "add_item failed")
+
 	def test_warehouse_get_max_stock(self):
 		pass
-	
+
 	def test_warehouse_get_max_price(self):
 		pass
 	
