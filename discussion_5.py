@@ -1,15 +1,11 @@
 import unittest
 
-
 def count_a(sentence):
 	count = 0
 	for letter in sentence:
 		if letter == 'a':
 			count += 1
 	return count
-
-
-
 
 class Item:
 	
